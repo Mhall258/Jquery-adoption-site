@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Simple Shop</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="products">
+            <h2>Our Products</h2>
+            <!-- Product Slider -->
+            <div id="product-slider">
+
+                <div class="product-slide">
+                        <img src="https://www.harringtonspetfood.com/cdn/shop/articles/Puppy_Big_Wide_World.jpg?v=1611665413" alt="Corgi puppy" >
+                        Corgi: Price $100
+                </div>
+                        
+                    <div class="product-slide" style="display:none;">
+                        <img src="https://d.newsweek.com/en/full/2373430/puppys-adopter-backed-out-puppy-still-won.png?w=1600&h=1600&q=88&f=3260e99a1a1ba63a2f1b998b5e3e0d11" alt="Border Collie" >
+                        Border Collie: Price $150
+                    </div>
+
+                        <div class="product-slide" style="display:none;">
+                            <img src="https://wellbeloved.com/cdn/shop/articles/do-you-have-a-hyperactive-puppy-understanding-puppy-energy-levels-james-wellbeloved-uk.jpg?v=1681891302" alt="Golden Retriever">
+                            Golden Retriever: Price $200
+                        </div>
+
+            </div>
+
+            <button id="next">Next</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Simple Shop &copy; 2024</p>
+    </footer>
+
+    <!-- jQuery Script -->
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let currentSlide = 0;
+            $("#next").click(function(){
+                currentSlide = (currentSlide + 1) % $(".product-slide").length;
+                $(".product-slide").hide();
+                $(".product-slide").eq(currentSlide).show();
+            });
+        });
+    </script>
+
+</body>
+</html>
