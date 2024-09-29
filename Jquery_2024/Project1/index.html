@@ -18,28 +18,43 @@
         </nav>
     </header>
 
+    <h2>Puppies!!!</h2>
+    <h3>Shop now</h3>
+
     <main>
+        <!-- Short description of what the site is -->
+        <button id="showButton">Show our Mission</button>
+        <div id="body">
+            <h5 >
+                "Welcome to our Puppy Adoption site! We believe every puppy deserves a loving home, and we are here to help you find your perfect furry friend. 
+                Browse through our selection of adorable puppies, each waiting for a new family to provide them with warmth and care. 
+                Whether you’re looking for a playful companion or a cuddle buddy, we have the perfect match for you. Adopt today and give a puppy a forever home filled with love!"
+            </h5>
+        </div>
+        
+
         <section id="products">
-            <h2>Our Products</h2>
+            
             <!-- Product Slider -->
             <div id="product-slider">
 
                 <div class="product-slide">
                         <img src="https://www.harringtonspetfood.com/cdn/shop/articles/Puppy_Big_Wide_World.jpg?v=1611665413" alt="Corgi puppy" >
-                        Corgi: Price $100
+                        <h4>Corgi: Price $100</h4>
                 </div>
                         
                     <div class="product-slide" style="display:none;">
                         <img src="https://d.newsweek.com/en/full/2373430/puppys-adopter-backed-out-puppy-still-won.png?w=1600&h=1600&q=88&f=3260e99a1a1ba63a2f1b998b5e3e0d11" alt="Border Collie" >
-                        Border Collie: Price $150
+                        <h4>Border Collie: Price $150</h4>
                     </div>
 
                         <div class="product-slide" style="display:none;">
                             <img src="https://wellbeloved.com/cdn/shop/articles/do-you-have-a-hyperactive-puppy-understanding-puppy-energy-levels-james-wellbeloved-uk.jpg?v=1681891302" alt="Golden Retriever">
-                            Golden Retriever: Price $200
+                            <h4>Golden Retriever: Price $200</h4>
                         </div>
 
             </div>
+            
 
             <button id="next">Next</button>
         </section>
@@ -50,14 +65,29 @@
     </footer>
 
     <!-- jQuery Script -->
+     
     <script src="jquery-3.7.1.min.js"></script>
     <script>
+        //carousel for puppies available!
         $(document).ready(function(){
             let currentSlide = 0;
             $("#next").click(function(){
                 currentSlide = (currentSlide + 1) % $(".product-slide").length;
                 $(".product-slide").hide();
                 $(".product-slide").eq(currentSlide).show();
+            });
+        });
+
+        $('h2').animate({
+            fontSize: '60px'
+        }, 1500 );
+
+        //Hide and show function for some user interactivity
+        $(document).ready(function() {
+               $("#body").hide(); 
+               $("#showButton").click(function() {
+               $("#body").show(); 
+               
             });
         });
     </script>

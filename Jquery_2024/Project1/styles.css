@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: rgba(112, 112, 112, 0.097);
 }
 
 header {
@@ -10,23 +11,75 @@ header {
     color: white;
     padding: 20px;
 }
+/* better nav styling to fit theme and color */
+nav {
+    background-color: #4CAF50; 
+    padding: 15px;
+    border-radius: 8px; 
+    
+}
 
 nav a {
-    margin: 0 15px;
-    color: white;
+    margin: 0 20px;
+    padding: 10px 20px;
+    color: #ffffff; 
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
+    background-color: #275d29; 
+    border-radius: 50px; 
+    transition: background-color 0.3s, transform 0.3s; 
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: #275d29; 
+    transform: scale(1.1); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+nav a:active {
+    background-color: #275d29; 
+    transform: scale(1); 
+}
+
+nav {
+    display: inline-block;
 }
 
 main {
     padding: 20px;
 }
+/* button styling for showing the body text */
+#showButton {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
+#showButton:hover {
+    background-color: #388E3C; 
+    transform: scale(1.05); 
+}
 
+#showButton:active {
+    background-color: #2E7D32; 
+    transform: scale(1); 
+}
+#body{
+    background-color: #449d47;
+    color: white;
+    margin: auto;
+    padding: 50px;
+    font-size: 20px;
+}
+/* carousel styling  */
 #products {
     padding: 20px;
 }
@@ -46,16 +99,16 @@ main {
 }
 
 .product-slide img {
-    max-width: 50em; /* Limit the width */
-    max-height: 50em; /* Limit the height */
-    width: auto;  /* Keep aspect ratio */
-    height: auto; /* Keep aspect ratio */
-    object-fit: contain; /* Ensure the image fits within the bounding box */
+    max-width: 50em; 
+    max-height: 50em; 
+    width: auto;  
+    height: auto; 
+    object-fit: contain; 
 }
 
 #next {
     display: inline-block;
-    margin: 50px auto;  /* Center the button and add some spacing */
+    margin: 50px auto;  
     padding: 20px 20px;
     background-color: #4CAF50;
     color: white;
