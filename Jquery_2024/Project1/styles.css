@@ -122,6 +122,41 @@ main {
     background-color: #45a049;
 }
 
+/* information about pups.hover */
+#product-container{
+    background-color: #137518;
+}
+.product-container {
+    position: relative;
+    width: 100%; 
+    max-width: 400px; 
+}
+
+.product-container img {
+    width: 100%; 
+    display: block;
+}
+
+.product-slide img hover{
+    opacity: 50%;
+}
+
+.product-slide h5 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0); 
+    color: rgb(0, 0, 0);
+    padding: 4em ;
+    opacity: 0; 
+    z-index: 20; 
+    transition: opacity 0.2s ease;
+    box-sizing: border-box; 
+    width: 100%; 
+
+}
+
 footer {
     background-color: #333;
     color: white;

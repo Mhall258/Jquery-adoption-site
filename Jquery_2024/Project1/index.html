@@ -25,11 +25,11 @@
         <!-- Short description of what the site is -->
         <button id="showButton">Show our Mission</button>
         <div id="body">
-            <h5 >
+            <p >
                 "Welcome to our Puppy Adoption site! We believe every puppy deserves a loving home, and we are here to help you find your perfect furry friend. 
                 Browse through our selection of adorable puppies, each waiting for a new family to provide them with warmth and care. 
                 Whether you’re looking for a playful companion or a cuddle buddy, we have the perfect match for you. Adopt today and give a puppy a forever home filled with love!"
-            </h5>
+            <p>
         </div>
         
 
@@ -40,20 +40,44 @@
 
                 <div class="product-slide">
                         <img src="https://www.harringtonspetfood.com/cdn/shop/articles/Puppy_Big_Wide_World.jpg?v=1611665413" alt="Corgi puppy" >
-                        <h4>Corgi: Price $100</h4>
+                        
+                            <h4>Corgi: Price $100</h4>
+                            <h5>
+                                Meet this adorable Corgi puppy, full of love and energy, and ready to find their forever home! With their playful spirit, signature short legs, and fluffy coat, this little one is sure to steal your heart.
+                                They love belly rubs, chasing after toys, and snuggling up for naps after a fun day of exploring.
+                                Perfect for families or individuals looking for a loyal and affectionate companion, this Corgi is excited to bring joy and happiness to their new family.
+                                Adopt this cutie today and get ready for endless tail wags and puppy kisses!
+                            </h5>  
+                        
+                        
                 </div>
                         
                     <div class="product-slide" style="display:none;">
                         <img src="https://d.newsweek.com/en/full/2373430/puppys-adopter-backed-out-puppy-still-won.png?w=1600&h=1600&q=88&f=3260e99a1a1ba63a2f1b998b5e3e0d11" alt="Border Collie" >
-                        <h4>Border Collie: Price $150</h4>
+                        
+                         <h4>Border Collie: Price $150</h4>
+                         <h5>
+                            This intelligent and energetic Border Collie puppy is looking for a loving home! Known for their sharp mind and playful nature, this little one is eager to learn and explore.
+                             With their striking black-and-white coat and bright, curious eyes, they are always ready for an adventure. 
+                             Whether it's chasing after a ball, mastering new tricks, or just enjoying a snuggle after a day of play, this puppy is sure to bring joy to an active and caring family. 
+                             Adopt this Border Collie and watch them grow into a loyal, loving companion!
+                         </h5>
+                       
+                        
                     </div>
 
                         <div class="product-slide" style="display:none;">
                             <img src="https://wellbeloved.com/cdn/shop/articles/do-you-have-a-hyperactive-puppy-understanding-puppy-energy-levels-james-wellbeloved-uk.jpg?v=1681891302" alt="Golden Retriever">
-                            <h4>Golden Retriever: Price $200</h4>
+                            
+                                <h4>Golden Retriever: Price $200</h4>
+                                <h5>
+                                    This sweet Golden Retriever puppy is ready to find a forever family! With their gentle personality and beautiful golden coat, they’re the perfect blend of playfulness and affection. 
+                                    Known for their friendly, loyal nature, this little pup loves making new friends—whether it’s with humans or other pets. 
+                                    They enjoy outdoor adventures, chasing after toys, and, of course, plenty of cuddle time. 
+                                    If you’re looking for a loving, loyal companion who will grow into a devoted family member, this Golden Retriever puppy is the perfect match for you! Adopt them today and start a lifetime of happy memories.
+                                </h5>
                         </div>
-
-            </div>
+                  </div>
             
 
             <button id="next">Next</button>
@@ -86,10 +110,24 @@
         $(document).ready(function() {
                $("#body").hide(); 
                $("#showButton").click(function() {
-               $("#body").show(); 
+               $("#body").fadeIn(800); 
                
             });
         });
+
+    
+        $(document).ready(function(){
+        $('.product-slide').hover(
+            function() {
+                $(this).find('h5').stop(true).fadeTo(300, 1); // Show h5 on hover
+                $(this).find('img').stop(true).fadeTo(300, 0.5);
+            }, 
+            function() {
+                $(this).find('h5').stop(true).fadeTo(300, 0); // Hide h5 when not hovering
+                $(this).find('img').stop(true).fadeTo(300, 1);
+            }
+        );
+    });
     </script>
 
 </body>
