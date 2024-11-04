@@ -109,7 +109,7 @@ main {
 #next {
     display: inline-block;
     margin: 50px auto;  
-    padding: 20px 20px;
+    padding: 30px 30px;
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -148,7 +148,7 @@ main {
     right: 0;
     background-color: rgba(0, 0, 0, 0); 
     color: rgb(0, 0, 0);
-    padding: 4em ;
+    padding: 1em ;
     opacity: 0; 
     z-index: 20; 
     transition: opacity 0.2s ease;
@@ -156,7 +156,22 @@ main {
     width: 100%; 
 
 }
+.tip-button{
+display: inline-block;
+margin: 50px auto;  
+padding: 30px 30px;
+background-color: #4CAF50;
+color: white;
+border: none;
+cursor: pointer;
+font-size: 16px;
+border-radius: 5px;
+}
 
+.tip-button:hover {
+background-color: #45a049;
+
+}
 footer {
     background-color: #333;
     color: white;

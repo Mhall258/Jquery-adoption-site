@@ -23,7 +23,7 @@
 
     <main>
         <!-- Short description of what the site is -->
-        <button id="showButton">Show our Mission</button>
+        <button id="showButton">See our Mission</button>
         <div id="body">
             <p >
                 "Welcome to our Puppy Adoption site! We believe every puppy deserves a loving home, and we are here to help you find your perfect furry friend. 
@@ -38,8 +38,8 @@
             <!-- Product Slider -->
             <div id="product-slider">
 
-                <div class="product-slide">
-                        <img src="https://www.harringtonspetfood.com/cdn/shop/articles/Puppy_Big_Wide_World.jpg?v=1611665413" alt="Corgi puppy" >
+                <div class="product-slide" class="col1">
+                        <div class='image-container'>" alt=""><img src="https://www.harringtonspetfood.com/cdn/shop/articles/Puppy_Big_Wide_World.jpg?v=1611665413" alt="Corgi puppy" ></div>
                         
                             <h4>Corgi: Price $100</h4>
                             <h5>
@@ -48,12 +48,13 @@
                                 Perfect for families or individuals looking for a loyal and affectionate companion, this Corgi is excited to bring joy and happiness to their new family.
                                 Adopt this cutie today and get ready for endless tail wags and puppy kisses!
                             </h5>  
-                        
+                            <button class="tip-button">Breed Tips</button>
+                            <div class="puppytip">Corgis are known for their loyalty and intelligence. They enjoy being active and make great companions for families.</div>
                         
                 </div>
                         
-                    <div class="product-slide" style="display:none;">
-                        <img src="https://d.newsweek.com/en/full/2373430/puppys-adopter-backed-out-puppy-still-won.png?w=1600&h=1600&q=88&f=3260e99a1a1ba63a2f1b998b5e3e0d11" alt="Border Collie" >
+                    <div class="product-slide" class="col2" style="display:none;">
+                        <div class='image-container'><img src="https://d.newsweek.com/en/full/2373430/puppys-adopter-backed-out-puppy-still-won.png?w=1600&h=1600&q=88&f=3260e99a1a1ba63a2f1b998b5e3e0d11" alt="Border Collie" ></div>
                         
                          <h4>Border Collie: Price $150</h4>
                          <h5>
@@ -62,12 +63,13 @@
                              Whether it's chasing after a ball, mastering new tricks, or just enjoying a snuggle after a day of play, this puppy is sure to bring joy to an active and caring family. 
                              Adopt this Border Collie and watch them grow into a loyal, loving companion!
                          </h5>
-                       
+                         <button class="tip-button">Breed Tips</button>
+                         <div class="puppytip">Border Collies are highly intelligent and energetic, often excelling in agility and obedience training.</div>
                         
                     </div>
 
-                        <div class="product-slide" style="display:none;">
-                            <img src="https://wellbeloved.com/cdn/shop/articles/do-you-have-a-hyperactive-puppy-understanding-puppy-energy-levels-james-wellbeloved-uk.jpg?v=1681891302" alt="Golden Retriever">
+                        <div class="product-slide" class="col3" style="display:none;">
+                            <div class='image-container'><img src="https://wellbeloved.com/cdn/shop/articles/do-you-have-a-hyperactive-puppy-understanding-puppy-energy-levels-james-wellbeloved-uk.jpg?v=1681891302" alt="Golden Retriever"></div>
                             
                                 <h4>Golden Retriever: Price $200</h4>
                                 <h5>
@@ -76,6 +78,8 @@
                                     They enjoy outdoor adventures, chasing after toys, and, of course, plenty of cuddle time. 
                                     If you’re looking for a loving, loyal companion who will grow into a devoted family member, this Golden Retriever puppy is the perfect match for you! Adopt them today and start a lifetime of happy memories.
                                 </h5>
+                                <button class="tip-button">Breed Tips</button>
+                                <div class="puppytip">Golden Retrievers are known for their friendly and loyal temperament, making them excellent family pets.</div>
                         </div>
                   </div>
             
@@ -92,6 +96,7 @@
      
     <script src="jquery-3.7.1.min.js"></script>
     <script>
+        
         //carousel for puppies available!
         $(document).ready(function(){
             let currentSlide = 0;
@@ -127,7 +132,40 @@
                 $(this).find('img').stop(true).fadeTo(300, 1);
             }
         );
+        
+        $(".puppytip").hide(); 
+               $
+               $(".tip-button").click(function() {
+               $(".puppytip").fadeIn(800);
+               
+               });
+               
+        });
+
+        $(document).ready(function() {
+    $('.image-container').css({
+        'width': '250px',
+        'height': '250px',
+        'overflow': 'hidden',
+        'border-radius': '50%',
+        'display': 'flex',
+        'justify-content': 'center',
+        'align-items': 'center',
+        'margin': 'auto'
     });
+
+    $('.image-container img').css({
+        'width': '150%',
+        'height': '150%',
+        'object-fit': 'cover',
+        'border-radius': '50%'
+    });
+});
+        
+
+   
+
+    
     </script>
 
 </body>
